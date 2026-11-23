@@ -1,0 +1,22 @@
+{
+  "name": "demiraloznur.github.io",
+  "version": "1.0.0",
+  "description": "Öznur Demiral — kişisel portfolyo sitesi",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "serve . -l 5173",
+    "test": "node --test test/",
+    "lint": "html-validate index.html cv/cv.html",
+    "foto": "node scripts/foto.mjs",
+    "cv": "node scripts/cv.mjs"
+  },
+  "author": "Öznur Demiral",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "html-validate": "^11.21.1",
+    "jsdom": "^31.0.1",
+    "serve": "^14.2.8",
+    "sharp": "^0.35.5"
+  }
+}
