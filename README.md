@@ -30,7 +30,7 @@ npm run lint     # HTML denetimi
 
 ## Fotoğraf ve CV
 
-- `npm run foto` — `kaynaklar/foto.jpg` dosyasından web görsellerini üretir (`assets/img/`). Orijinal fotoğraf repoya girmez.
+- `npm run foto` — `kaynaklar/foto-cevrilmis.png` dosyasından (fotoğraf iPhone HEIC ise önce Windows ile PNG'ye çevrilir) web görsellerini üretir (`assets/img/`). Orijinal fotoğraf repoya girmez.
 - `npm run cv` — `cv/cv.html` dosyasını Microsoft Edge ile `assets/oznur-demiral-cv.pdf` olarak yazdırır.
 
 Tasarım kararları: [`docs/tasarim.md`](docs/tasarim.md) · Uygulama planı: [`docs/plan.md`](docs/plan.md)
