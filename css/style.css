@@ -1,0 +1,193 @@
+/* =========================================================
+   Öznur Demiral — portfolyo
+   Palet: Espresso (3 renk) · Yazı tipi: Inter
+   ========================================================= */
+
+:root {
+  --bg: #efe8df;
+  --ink: #2b211c;
+  --ac: #a0806a;
+
+  --yuzey: color-mix(in srgb, var(--ink) 7%, var(--bg));
+  --cizgi: color-mix(in srgb, var(--ink) 14%, var(--bg));
+  --soluk: color-mix(in srgb, var(--ink) 62%, var(--bg));
+
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --r-kutu: 22px;
+  --bosluk: clamp(1rem, 3vw, 2rem);
+  --genislik: 1200px;
+  --egri: cubic-bezier(.2, .8, .2, 1);
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #1e1815;
+  --ink: #efe8df;
+  --ac: #c4a48c;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--ac);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.atla {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: .5rem 1rem;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 999px;
+  z-index: 20;
+}
+.atla:focus { top: 1rem; }
+
+/* ---------- Tipografi ölçeği: büyük ↔ küçük zıtlığı ---------- */
+.dev-baslik {
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.035em;
+  margin: 0;
+}
+
+.bolum-baslik {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.03em;
+  margin: 0 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.etiket {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--soluk);
+  margin: 0;
+}
+
+/* ---------- Üst bar ---------- */
+.ust-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: var(--genislik);
+  margin: 0 auto;
+  padding: 1rem var(--bosluk);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.marka {
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--soluk);
+  transition: color .2s;
+}
+.menu a:hover { color: var(--ink); }
+
+.tema-dugmesi {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--yuzey);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform .3s var(--egri);
+}
+.tema-dugmesi:hover { transform: rotate(-15deg) scale(1.08); }
+.tema-dugmesi svg {
+  grid-area: 1 / 1;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.ikon-gunes,
+[data-theme='dark'] .ikon-ay { display: none; }
+[data-theme='dark'] .ikon-gunes { display: block; }
+
+@media (max-width: 720px) {
+  .menu { display: none; }
+}
+
+/* ---------- Bölümler ---------- */
+.bolum {
+  max-width: var(--genislik);
+  margin: 0 auto;
+  padding: clamp(3rem, 9vw, 7rem) var(--bosluk);
+}
+
+.alt-bilgi {
+  max-width: var(--genislik);
+  margin: 0 auto;
+  padding: 2rem var(--bosluk) 3rem;
+  font-size: .8125rem;
+  color: var(--soluk);
+}
+
+/* Tema geçişi: View Transitions varsayılan solmasını kapat, daireyi JS çizer */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* ---------- Hareketi azalt ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
