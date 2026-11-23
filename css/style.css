@@ -334,6 +334,95 @@ a { color: inherit; }
   .kutu--foto { grid-row: auto; aspect-ratio: 4 / 5; }
 }
 
+.bolum-giris {
+  max-width: 52ch;
+  margin: calc(-1 * clamp(.75rem, 2vw, 1.75rem)) 0 clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--soluk);
+  font-size: 1.05rem;
+}
+
+/* ---------- Projeler ---------- */
+.proje-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: clamp(.6rem, 1.2vw, .9rem);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 17rem;
+  padding: clamp(1.2rem, 2.4vw, 1.75rem);
+  border-radius: var(--r-kutu);
+  background: var(--yuzey);
+  transition: transform .35s var(--egri), background-color .5s;
+}
+.project:hover { transform: translateY(-4px); }
+
+.project-ust {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-no {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1;
+  color: var(--ac);
+}
+
+.project-govde { flex: 1; }
+
+.project-baslik {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin: 0 0 .4rem;
+  overflow-wrap: anywhere;
+}
+
+.project-aciklama {
+  margin: 0;
+  color: var(--soluk);
+  font-size: .95rem;
+  overflow-wrap: anywhere;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tags li {
+  padding: .2rem .65rem;
+  border-radius: 999px;
+  border: 1px solid var(--cizgi);
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.project-linkler { display: flex; gap: 1rem; }
+
+.project-link {
+  font-size: .875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--ac);
+}
+
+.project--soon {
+  justify-content: flex-end;
+  background: transparent;
+  border: 1.5px dashed var(--cizgi);
+}
+
 /* Tema geçişi: View Transitions varsayılan solmasını kapat, daireyi JS çizer */
 ::view-transition-old(root),
 ::view-transition-new(root) {
