@@ -1,0 +1,11 @@
+# Orijinal kaynaklar ve referanslar — asla commit edilmez
+OznurDemiralCV.pdf
+/kaynaklar/
+*.mp4
+*.mov
+
+# Araç ve sistem dosyaları
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
