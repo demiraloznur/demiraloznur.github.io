@@ -423,6 +423,143 @@ a { color: inherit; }
   border: 1.5px dashed var(--cizgi);
 }
 
+/* ---------- Hakkımda ---------- */
+.hakkimda {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.hakkimda-vurgu {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.hakkimda-metin p { margin: 0 0 1rem; color: var(--soluk); }
+
+@media (max-width: 800px) {
+  .hakkimda { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- Yolculuk ---------- */
+.zaman {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--cizgi);
+}
+
+.durak {
+  position: relative;
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0 0 2rem 2rem;
+}
+
+.durak::before {
+  content: '';
+  position: absolute;
+  left: -.45rem;
+  top: .35rem;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--ac);
+}
+
+.durak-tarih {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--ac);
+  padding-top: .1rem;
+}
+
+.durak-baslik {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  line-height: 1.3;
+}
+
+.durak-detay {
+  margin: .25rem 0 0;
+  max-width: 60ch;
+  color: var(--soluk);
+  font-size: .925rem;
+}
+
+.rozet {
+  display: inline-block;
+  margin-bottom: .35rem;
+  padding: .1rem .55rem;
+  border-radius: 999px;
+  background: var(--yuzey);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+.rozet--vurgu { background: var(--ac); color: var(--bg); }
+
+.durak--simdi::before { background: var(--ac); }
+
+.durak--hedef { padding-bottom: 0; }
+.durak--hedef::before { border-style: dashed; width: 1.1rem; height: 1.1rem; left: -.6rem; top: .2rem; }
+.durak--hedef > div {
+  padding: 1rem 1.25rem;
+  border: 1.5px dashed var(--ac);
+  border-radius: var(--r-kutu);
+}
+
+@media (max-width: 600px) {
+  .durak { grid-template-columns: minmax(0, 1fr); gap: .25rem; padding-left: 1.5rem; }
+}
+
+/* ---------- Beceriler ---------- */
+.beceri-izgara {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: clamp(.6rem, 1.2vw, .9rem);
+}
+
+.beceri {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
+  border-radius: var(--r-kutu);
+  background: var(--yuzey);
+  transition: transform .35s var(--egri), background-color .5s;
+}
+.beceri:hover { transform: translateY(-4px); }
+.beceri .etiket { margin-top: auto; }
+
+.beceri-baslik {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.beceri--koyu { background: var(--ink); color: var(--bg); }
+.beceri--koyu .etiket { color: color-mix(in srgb, var(--bg) 65%, var(--ink)); }
+.beceri--koyu .tags li { border-color: color-mix(in srgb, var(--bg) 30%, var(--ink)); }
+
+/* ---------- Kaydırınca belirme (yalnızca JS varken gizlenir) ---------- */
+.js .reveal {
+  transition: opacity .7s var(--egri), transform .7s var(--egri);
+}
+.js .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
 /* Tema geçişi: View Transitions varsayılan solmasını kapat, daireyi JS çizer */
 ::view-transition-old(root),
 ::view-transition-new(root) {
