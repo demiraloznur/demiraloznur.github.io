@@ -24,7 +24,5 @@ test('orijinal CV ve kaynaklar klasörü repoda değil', () => {
   assert.ok(!dosyalar.some((f) => f.startsWith('kaynaklar/')));
 });
 
-test('üretilen CV PDF içinde telefon numarası yok', { skip: !existsSync('assets/oznur-demiral-cv.pdf') }, () => {
-  const pdf = readFileSync('assets/oznur-demiral-cv.pdf').toString('latin1');
-  assert.ok(!TELEFON.test(pdf));
-});
+// Not: Edge'in ürettiği PDF'te metin sıkıştırılmış olduğundan PDF taranmaz;
+// PDF'in kaynağı cv/cv.html yukarıdaki metin taramasına dahildir.

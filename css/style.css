@@ -551,6 +551,50 @@ a { color: inherit; }
 .beceri--koyu .etiket { color: color-mix(in srgb, var(--bg) 65%, var(--ink)); }
 .beceri--koyu .tags li { border-color: color-mix(in srgb, var(--bg) 30%, var(--ink)); }
 
+/* ---------- İletişim ---------- */
+.iletisim {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: end;
+}
+
+.iletisim-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--cizgi);
+}
+
+.iletisim-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem .25rem;
+  border-bottom: 1px solid var(--cizgi);
+  text-decoration: none;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  transition: padding .35s var(--egri), color .2s;
+}
+.iletisim-link:hover { padding-left: .9rem; color: var(--ac); }
+
+.iletisim-link--cv {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+}
+.iletisim-link--cv .etiket { color: color-mix(in srgb, var(--bg) 65%, var(--ink)); }
+.iletisim-link--cv:hover { padding-left: 1.6rem; color: var(--bg); }
+
+@media (max-width: 800px) {
+  .iletisim { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* ---------- Kaydırınca belirme (yalnızca JS varken gizlenir) ---------- */
 .js .reveal {
   transition: opacity .7s var(--egri), transform .7s var(--egri);
