@@ -77,7 +77,7 @@ a { color: inherit; }
 .dev-baslik--ad {
   font-size: clamp(2.8rem, 6.4vw, 5.6rem);
   letter-spacing: -.045em;
-  line-height: .9;
+  line-height: 1.02; /* İ'nin noktası üst satıra değmesin */
 }
 
 .bolum-baslik {
@@ -112,10 +112,26 @@ a { color: inherit; }
 }
 
 .marka {
-  font-weight: 700;
   text-decoration: none;
   margin-right: auto;
+  border-radius: 12px;
 }
+
+/* Sekme ikonuyla (assets/favicon.svg) aynı monogram */
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  transition: transform .35s var(--egri), background-color .5s, color .5s;
+}
+.marka:hover .monogram { transform: rotate(-6deg) scale(1.06); }
 
 .menu {
   display: flex;
