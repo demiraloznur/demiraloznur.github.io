@@ -76,7 +76,7 @@ bu iddianın kanıtı olmalı ve GitHub'daki ilk proje olarak da durmalı.
 2. **Hakkımda:** CV özetinin kısa, samimi bir anlatımı.
 3. **Yolculuk:** zaman çizelgesi; sertifikalar burada yer alır:
    2024 SUBÜ başlangıç · Ara 2024 BTK HTML5 · May–Haz 2025 Cisco CCNA ITN · Tem–Ağu 2025 Cesur Ambalaj stajı ·
-   2026 AI Agents Bootcamp · Haz 2026 mezuniyet · Eyl–Eki 2026 Python Temel · Kas 2026– Python Mid-Level (devam ediyor) · Hedef: DGS → Yazılım Mühendisliği.
+   2026 AI Agents Bootcamp · Haz 2026 mezuniyet · Eki 2026 Python - Software Development Essentials · Kas 2026– Python Mid-Level (devam ediyor) · Hedef: DGS → Yazılım Mühendisliği.
 4. **Beceriler:** gruplu kartlar — Web, Programlama (Python, C#, ASP.NET Core MVC, Java, PHP), Veri tabanı, IT ve Ağ, Araçlar. Düzey etiketleri dürüst ("temel düzey").
 5. **Projeler:** `js/projects.js` içindeki diziden üretilir. İlk kart: bu site. Liste kısa olduğunda "Yeni projeler yolda" kartı görünür.
 6. **İletişim:** e-posta, GitHub (`github.com/demiraloznur`), LinkedIn, "CV'yi indir" düğmesi. Telefon yok.
