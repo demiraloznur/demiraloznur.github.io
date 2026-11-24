@@ -117,21 +117,14 @@ a { color: inherit; }
   border-radius: 12px;
 }
 
-/* Sekme ikonuyla (assets/favicon.svg) aynı monogram */
-.monogram {
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 12px;
-  background: var(--ink);
-  color: var(--bg);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: -.04em;
-  transition: transform .35s var(--egri), background-color .5s, color .5s;
+/* Logo yok: küçük, harf aralıklı sade yazı */
+.marka-yazi {
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  transition: color .2s;
 }
-.marka:hover .monogram { transform: rotate(-6deg) scale(1.06); }
+.marka:hover .marka-yazi { color: var(--ac); }
 
 .menu {
   display: flex;
