@@ -219,28 +219,19 @@ a { color: inherit; }
   height: 100%;
 }
 
+/* Fotoğrafın üstünde katman yok: hareket fotoğrafın kendisinde. */
 .kutu--foto img {
   object-fit: cover;
   object-position: 50% 25%;
-  mix-blend-mode: multiply;
+  animation: yaklas 1.8s var(--egri) both;
+  transition: transform 1.2s var(--egri);
 }
 
+.kutu--foto:hover img { transform: scale(1.04); }
 
-.kure {
-  position: absolute;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--bg) 40%, transparent);
-  animation: suzul 9s ease-in-out infinite;
-  z-index: 1;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
-}
-.kure--bir { width: 45%; aspect-ratio: 1; top: 6%; left: -8%; }
-.kure--iki { width: 28%; aspect-ratio: 1; bottom: 8%; right: -4%; animation-delay: -4.5s; }
-
-@keyframes suzul {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(18px, -14px) scale(1.08); }
+@keyframes yaklas {
+  from { transform: scale(1.12); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .kutu--genis { grid-column: span 2; }
