@@ -587,13 +587,7 @@ a { color: inherit; }
 
 .durak--simdi::before { background: var(--ac); }
 
-.durak--hedef { padding-bottom: 0; }
-.durak--hedef::before { border-style: dashed; width: 1.1rem; height: 1.1rem; left: -.6rem; top: .2rem; }
-.durak--hedef > div {
-  padding: 1rem 1.25rem;
-  border: 1.5px dashed var(--ac);
-  border-radius: var(--r-kutu);
-}
+.durak:last-child { padding-bottom: 0; }
 
 @media (max-width: 600px) {
   .durak { grid-template-columns: minmax(0, 1fr); gap: .25rem; padding-left: 1.5rem; }

@@ -12,7 +12,7 @@ bu iddianın kanıtı olmalı ve GitHub'daki ilk proje olarak da durmalı.
 ## Hedefler
 
 - Tek sayfalık, hızlı açılan, mobil uyumlu bir site.
-- Durağan CV yerine "ilerleyen biri" izlenimi: şu an öğrendikleri, yolculuğu, hedefi (DGS → Yazılım Mühendisliği).
+- Durağan CV yerine "ilerleyen biri" izlenimi: şu an öğrendikleri ve yolculuğu.
 - Proje bölümü yeni projeler eklendikçe büyüyecek; proje eklemek tek bir veri dosyasına birkaç satır yazmak kadar kolay.
 - Telefonsuz CV'nin PDF olarak indirilebilmesi.
 
@@ -72,11 +72,11 @@ bu iddianın kanıtı olmalı ve GitHub'daki ilk proje olarak da durmalı.
 ### Bölümler (tek sayfa, sırayla)
 
 1. **Açılış (bento):** ad, "Junior yazılım geliştirici", büyük başlık ("Meraklı. Gelişime açık."), fotoğraf,
-   konum (Bursa), durum (İş arıyorum), şu an öğrendiği (Python Mid-Level), staj (Cesur Ambalaj), hedef (DGS → Yazılım Müh.), projeler kısayolu.
+   konum (Bursa), durum (İş arıyorum), şu an öğrendiği (Python Mid-Level), staj (Cesur Ambalaj), projeler kısayolu.
 2. **Hakkımda:** CV özetinin kısa, samimi bir anlatımı.
 3. **Yolculuk:** zaman çizelgesi; sertifikalar burada yer alır:
    2024 SUBÜ başlangıç · Ara 2024 BTK HTML5 · Tem 2025 Cisco CCNA ITN · Tem–Ağu 2025 Cesur Ambalaj stajı ·
-   Haz 2026 mezuniyet · Ağu 2026 AI Literacy (IBM SkillsBuild, AI Agents Bootcamp kapsamında) · Eki 2026 Python - Software Development Essentials · Kas 2026– Python Mid-Level (devam ediyor) · Hedef: DGS → Yazılım Mühendisliği.
+   Haz 2026 mezuniyet · Ağu 2026 AI Literacy (IBM SkillsBuild, AI Agents Bootcamp kapsamında) · Eki 2026 Python - Software Development Essentials · Kas 2026– Python Mid-Level (devam ediyor).
 4. **Beceriler:** gruplu kartlar — Web, Programlama (Python, C#, ASP.NET Core MVC, Java, PHP), Veri tabanı, IT ve Ağ, Araçlar. Düzey etiketleri dürüst ("temel düzey").
 5. **Projeler:** `js/projects.js` içindeki diziden üretilir. İlk kart: bu site. Liste kısa olduğunda "Yeni projeler yolda" kartı görünür.
 6. **İletişim:** e-posta, GitHub (`github.com/demiraloznur`), LinkedIn, "CV'yi indir" düğmesi. Telefon yok.

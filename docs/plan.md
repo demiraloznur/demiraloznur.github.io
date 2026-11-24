@@ -89,7 +89,7 @@
 - Consumes: Task 2 görselleri, Task 3 değişkenleri.
 
 Kutular (masaüstü 4 sütun, ≤900px 2 sütun, ≤560px 1 sütun):
-büyük başlık "Meraklı. Gelişime açık." + "Junior yazılım geliştirici" (2×2) · fotoğraf (2×3, vurgu zemin, `object-fit: cover`, `object-position: 50% 20%`, arkada iki yavaş süzülen daire 8s) · Konum: Bursa · Durum: ● İş arıyorum (koyu kutu) · Şu an öğreniyorum: Python Mid-Level, devam ediyor (2×1, ilerleme çubuğu) · Staj: Cesur Ambalaj, Bilgi işlem · 2025 · Hedef: DGS → Yazılım Mühendisliği · Projeler → `#projeler` (2×1, koyu kutu).
+büyük başlık "Meraklı. Gelişime açık." + "Junior yazılım geliştirici" (2×2) · fotoğraf (2×3, vurgu zemin, `object-fit: cover`, `object-position: 50% 20%`, arkada iki yavaş süzülen daire 8s) · Konum: Bursa · Durum: ● İş arıyorum (koyu kutu) · Şu an öğreniyorum: Python Mid-Level, devam ediyor (2×1, ilerleme çubuğu) · Staj: Cesur Ambalaj, Bilgi işlem · 2025 · Projeler → `#projeler` (2×1, koyu kutu).
 
 - [ ] **Step 1:** HTML + CSS yaz. Hover: `translateY(-4px) scale(1.015)`, 350ms `cubic-bezier(.2,.8,.2,1)`. Fotoğrafın `alt`'ı: "Öznur Demiral'ın portresi".
 - [ ] **Step 2:** `npm run dev`, tarayıcıda 1280, 768 ve 360 genişlikte ekran görüntüsü al; her genişlikte `document.documentElement.scrollWidth <= clientWidth` → `true`.
