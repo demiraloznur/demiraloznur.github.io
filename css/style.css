@@ -291,21 +291,6 @@ a { color: inherit; }
 
 .soluk { color: var(--soluk); font-weight: 400; }
 
-.nokta {
-  display: inline-block;
-  width: .55rem;
-  height: .55rem;
-  margin-right: .3rem;
-  border-radius: 50%;
-  background: var(--ac);
-  animation: nabiz 2.4s ease-in-out infinite;
-}
-
-@keyframes nabiz {
-  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ac) 60%, transparent); }
-  50% { box-shadow: 0 0 0 .4rem transparent; }
-}
-
 .ilerleme {
   height: .4rem;
   border-radius: 999px;
