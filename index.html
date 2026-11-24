@@ -23,9 +23,7 @@
         d.dataset.theme = t;
       })();
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/main.js"></script>
   </head>
@@ -34,8 +32,12 @@
 
     <header class="ust-bar">
       <a class="marka" href="#ust" aria-label="Öznur Demiral — başa dön"><span class="marka-yazi" aria-hidden="true">ÖD — PORTFOLYO</span></a>
-      <nav aria-label="Bölümler">
-        <ul class="menu">
+      <nav class="gezinme" aria-label="Bölümler">
+        <button class="menu-dugmesi" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç">
+          <span class="menu-cizgi" aria-hidden="true"></span>
+          <span class="menu-cizgi" aria-hidden="true"></span>
+        </button>
+        <ul id="menu" class="menu">
           <li><a href="#hakkimda">Hakkımda</a></li>
           <li><a href="#yolculuk">Yolculuk</a></li>
           <li><a href="#beceriler">Beceriler</a></li>

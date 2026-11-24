@@ -12,7 +12,7 @@
 ## Global Constraints
 
 - Palet: açık `--bg:#EFE8DF --ink:#2B211C --ac:#A0806A`; koyu `--bg:#1E1815 --ink:#EFE8DF --ac:#C4A48C`. Kutu yüzeyi `color-mix(in srgb, var(--ink) 7%, var(--bg))`. Başka renk yok.
-- Yazı tipi yalnızca Inter (Google Fonts, 400/500/700/800). İtalik, serif, harf animasyonu yok.
+- Yazı tipi yalnızca Inter (sitenin kendi dosyalarından, değişken yazı tipi). İtalik, serif, harf animasyonu yok.
 - `<html lang="tr">`. Tüm metinler Türkçe.
 - Telefon numarası hiçbir commit edilen dosyada yer almaz. `OznurDemiralCV.pdf`, `kaynaklar/` ve video dosyaları commit edilmez.
 - `prefers-reduced-motion: reduce` → tüm animasyon/geçişler kapalı.

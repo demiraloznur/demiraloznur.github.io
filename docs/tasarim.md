@@ -88,7 +88,8 @@ Telefonsuz CV, repodaki bir HTML kaynağından (`cv/cv.html`) Microsoft Edge'in 
 ### Teknoloji
 
 - `index.html`, `css/style.css`, `js/main.js`, `js/projects.js`, `assets/`.
-- Kütüphane yok. Inter, Google Fonts'tan yüklenir.
+- Kütüphane yok. Inter, sitenin kendi dosyalarından (assets/fonts, değişken yazı tipi, latin + latin-ext) yüklenir; dış sunucuya bağlantı yok.
+- Dar ekranlarda (≤720px) bölüm bağlantıları, üst bardaki menü düğmesiyle açılan bir panelde.
 - `package.json` yalnızca geliştirme komutları için: yerel önizleme sunucusu, HTML/CSS denetimi.
 - SEO/paylaşım: `meta description`, Open Graph etiketleri, "ÖD" favicon.
 

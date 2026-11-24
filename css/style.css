@@ -3,6 +3,28 @@
    Palet: Espresso (3 renk) · Yazı tipi: Inter
    ========================================================= */
 
+/* Inter, sitenin kendi dosyalarından (SIL OFL 1.1, bkz. assets/fonts/OFL.txt).
+   Değişken yazı tipi: 100–900 arası tüm kalınlıklar tek dosyada. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../assets/fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations');
+  /* latin-ext: ğ, ş, İ, Ğ, Ş */
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../assets/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+  /* latin: ç, ö, ü, ı dahil */
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --bg: #efe8df;
   --ink: #2b211c;
@@ -169,8 +191,73 @@ a { color: inherit; }
 [data-theme='dark'] .ikon-ay { display: none; }
 [data-theme='dark'] .ikon-gunes { display: block; }
 
+/* Menü düğmesi: yalnızca dar ekranlarda görünür */
+.menu-dugmesi {
+  display: none;
+  place-items: center;
+  align-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--yuzey);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.menu-cizgi {
+  display: block;
+  width: 1rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform .3s var(--egri);
+}
+
+.menu-dugmesi[aria-expanded='true'] .menu-cizgi:first-child { transform: translateY(3.5px) rotate(45deg); }
+.menu-dugmesi[aria-expanded='true'] .menu-cizgi:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
 @media (max-width: 720px) {
-  .menu { display: none; }
+  .ust-bar { gap: .6rem; }
+
+  /* JS yoksa menü her zaman görünür, satırlara sarılır */
+  .no-js .menu { flex-wrap: wrap; gap: .25rem 1rem; }
+
+  .js .menu-dugmesi { display: grid; }
+
+  .js .menu {
+    position: absolute;
+    top: calc(100% - .25rem);
+    left: var(--bosluk);
+    right: var(--bosluk);
+    flex-direction: column;
+    gap: 0;
+    padding: .5rem 1.25rem;
+    border-radius: var(--r-kutu);
+    background: var(--bg);
+    box-shadow: 0 0 0 1px var(--cizgi), 0 18px 40px -18px color-mix(in srgb, var(--ink) 35%, transparent);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .25s var(--egri), transform .25s var(--egri), visibility 0s linear .25s;
+  }
+
+  .js .menu.acik {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity .25s var(--egri), transform .25s var(--egri);
+  }
+
+  .js .menu li + li { border-top: 1px solid var(--cizgi); }
+
+  .js .menu a {
+    display: block;
+    padding: .85rem 0;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
 }
 
 /* ---------- Bölümler ---------- */
