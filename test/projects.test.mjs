@@ -60,6 +60,7 @@ test('yeniden çizim önceki kartları temizler', () => {
   assert.equal(kap.querySelector('p.eski'), null);
 });
 
-test('projects.js ilk kaydı bu site', () => {
-  assert.equal(projects[0].title, 'Kişisel portfolyo');
+test('projects.js: en yeni proje başta, bu site listede', () => {
+  assert.equal(projects[0].repo, 'https://github.com/demiraloznur/olcu-studio-panel');
+  assert.ok(projects.some((p) => p.repo === 'https://github.com/demiraloznur/demiraloznur.github.io'));
 });
