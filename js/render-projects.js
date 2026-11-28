@@ -54,6 +54,11 @@ function yoldaKarti(doc) {
   return art;
 }
 
+// Bento kutusundaki "03 proje" gibi sayaç metni: elle yazılmaz, listeden üretilir.
+export function projeSayisiMetni(n) {
+  return `${String(n).padStart(2, '0')} proje`;
+}
+
 export function renderProjects(list, container, doc = document) {
   container.replaceChildren();
   list.forEach((p, i) => container.append(kart(doc, p, i + 1)));

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
-import { renderProjects } from '../js/render-projects.js';
+import { renderProjects, projeSayisiMetni } from '../js/render-projects.js';
 import { projects } from '../js/projects.js';
 
 function kur(list) {
@@ -60,7 +60,12 @@ test('yeniden çizim önceki kartları temizler', () => {
   assert.equal(kap.querySelector('p.eski'), null);
 });
 
+test('proje sayacı iki haneli yazılır', () => {
+  assert.equal(projeSayisiMetni(3), '03 proje');
+  assert.equal(projeSayisiMetni(12), '12 proje');
+});
+
 test('projects.js: en yeni proje başta, bu site listede', () => {
-  assert.equal(projects[0].repo, 'https://github.com/demiraloznur/olcu-studio-panel');
+  assert.equal(projects[0].repo, 'https://github.com/demiraloznur/shadow-and-bones-gym');
   assert.ok(projects.some((p) => p.repo === 'https://github.com/demiraloznur/demiraloznur.github.io'));
 });
